@@ -20,20 +20,22 @@ const TeamMember = ({image, name, title, email}: {image: string, name: string, t
 
 export default function Team() {
     return(
-        <div className="bg-[#E9C0E9] p-24 w-screen h-[90vh]">
-            <div className="text-center pb-12">
-        
-        <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl font-heading text-gray-900">
+        <div className="bg-[#E9C0E9] p-6 sm:p-12 md:p-24 w-screen h-full">
+        <div className="text-center pb-6 sm:pb-12">
+          <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
             Check our awesome team members
-        </h1>
-        <h3 className="font-bold text-lg font-heading text-gray-900">(If you need to contact someone, just contact Joni)</h3>
-    </div>
-        <div className="grid 2xl:grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-12">
-            <TeamMember name="Viljami Vastamäki" image="https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--29%20%281%29.jpg?img=medium"  title="Tech King" email="viljami@pohina.group"/>
-            <TeamMember name="Joni Juntto" image="https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--8.jpg?img=medium" title="Chief Visionary Officer" email="joni@pohina.group"/>
-            <TeamMember name="Miro Puolanen" image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9nliPbq9MdVYojmzJMad2tgCOzI-4nQr7QwTBDhQaYQ&s" title="Chief Tesla Officer" email="miro@pohina.group"/>
-            </div>
-            </div>
+          </h1>
+          <h3 className="font-bold text-base sm:text-lg md:text-xl text-gray-900">
+            (If you need to contact someone, just contact Joni)
+          </h3>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <TeamMember name="Viljami Vastamäki" image="https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--29%20%281%29.jpg?img=medium"  title="Tech King" email="viljami@pohina.group"/>
+<TeamMember name="Joni Juntto" image="https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--8.jpg?img=medium" title="Chief Visionary Officer" email="joni@pohina.group"/>
+<TeamMember name="Miro Puolanen" image="https://cdn.discordapp.com/attachments/1196421402132226058/1197224896925810698/IMG_3751.jpg?ex=65ba7d92&is=65a80892&hm=cdd215a007abe0f9fd8b276c8c08fa25808261e9fb040f65acaac41981b89779&" title="Chief Tesla Officer" email="miro@pohina.group"/>
+        </div>
+      </div>
     )
 
 }
+
