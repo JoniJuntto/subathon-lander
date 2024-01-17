@@ -1,6 +1,8 @@
+import logo from '../assets/logo.svg'
 export default function Hero() {
     return (
-      <div className="flex flex-col items-center justify-center w-screen h-[90vh] bg-[#254F1A] p-6 sm:p-12 md:p-24">
+      <div className="flex flex-col items-center justify-center w-screen xl:h-[90vh] sm:h-screen bg-[#254F1A] p-6 sm:p-12 md:p-24">
+        <img src={logo} className="w-80 h-64" />
         <div className="text-center pb-12">
           <h1 className="text-[#D2E823] font-oswald font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
             We do what we do best
