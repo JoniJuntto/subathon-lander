@@ -39,7 +39,6 @@ export default function Products() {
             </a>
           </div>
         </div>
-        h1 Hh
       </div>
       <br className="my-12" />
       <div className="flex flex-col justify-center">
