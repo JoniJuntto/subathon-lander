@@ -1,4 +1,3 @@
-import React from "react";
 
 function Icon({children}: {children: JSX.Element[] | JSX.Element}) {
   return (
