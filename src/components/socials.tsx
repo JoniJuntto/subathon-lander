@@ -2,37 +2,50 @@ import linkedin from "../assets/LinkedIn.svg";
 import github from "../assets/github.svg";
 import { Social, SocialInfo } from "./types";
 
-const GitHub = () => (
-  <div className="border mx-1 hover:bg-gray-400 w-12 h-12 fill-[#1d9bf0] hover:fill-white border-gray-400 rounded-full flex items-center justify-center shadow-xl hover:shadow-gray-400/50 cursor-pointer">
+export const GitHub = () => {
+return(
+  <div className="bg-gray-200 border mx-1 hover:bg-gray-400 w-12 h-12 fill-[#1d9bf0] hover:fill-white border-gray-400 rounded-full flex items-center justify-center shadow-xl hover:shadow-gray-400/50 cursor-pointer">
     <img src={github} alt="github" className="w-8" />
   </div>
 );
+}
 
-const LinkedIn = () => (
-  <div className="border mx-1 hover:bg-[#1d9bf0] w-12 h-12 fill-[#1d9bf0] hover:fill-white border-blue-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-sky-500/50 cursor-pointer">
-    <img src={linkedin} alt="linkedin" className="w-8" />
+export const LinkedIn = () => {
+return(
+  <div className="mx-1 hover:bg-[#1d9bf0] w-12 h-12 fill-[#1d9bf0] hover:fill-white border-blue-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-sky-500/50 cursor-pointer">
+    <img src={linkedin} alt="linkedin" className="w-12 rounded-full" />
   </div>
+  
 );
+}
 
-const Twitter = () => (
-  <div className="border mx-1 hover:bg-[#1d9bf0] w-12 h-12 fill-[#1d9bf0] hover:fill-white border-blue-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-sky-500/50 cursor-pointer">
-    <svg
+export const Twitter = () => {
+
+return(
+  <div className="mx-1 hover:bg-[#1d9bf0] w-12 bg-slate-200 h-12 fill-[#1d9bf0] hover:fill-white border-blue-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-sky-500/50 cursor-pointer">
+          <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="32"
+      height="32"
+      enableBackground="new 0 0 24 24"
+      version="1.1"
       viewBox="0 0 24 24"
+      xmlSpace="preserve"
+        fill="#000"
     >
-      <path d="M19.633 7.997c.013.175.013.349.013.523 0 5.325-4.053 11.461-11.46 11.461-2.282 0-4.402-.661-6.186-1.809.324.037.636.05.973.05a8.07 8.07 0 0 0 5.001-1.721 4.036 4.036 0 0 1-3.767-2.793c.249.037.499.062.761.062.361 0 .724-.05 1.061-.137a4.027 4.027 0 0 1-3.23-3.953v-.05c.537.299 1.16.486 1.82.511a4.022 4.022 0 0 1-1.796-3.354c0-.748.199-1.434.548-2.032a11.457 11.457 0 0 0 8.306 4.215c-.062-.3-.1-.611-.1-.923a4.026 4.026 0 0 1 4.028-4.028c1.16 0 2.207.486 2.943 1.272a7.957 7.957 0 0 0 2.556-.973 4.02 4.02 0 0 1-1.771 2.22 8.073 8.073 0 0 0 2.319-.624 8.645 8.645 0 0 1-2.019 2.083z"></path>
+      <path d="M14.095 10.316L22.286 1h-1.94L13.23 9.088 7.551 1H1l8.59 12.231L1 23h1.94l7.51-8.543L16.45 23H23l-8.905-12.684zm-2.658 3.022l-.872-1.218L3.64 2.432h2.98l5.59 7.821.869 1.219 7.265 10.166h-2.982l-5.926-8.3z"></path>
     </svg>
   </div>
 );
+}
 
-const Instagram = () => (
-  <div className="border mx-1 hover:bg-[#bc2a8d] w-12 h-12 fill-[#bc2a8d] hover:fill-white border-pink-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-pink-500/50 cursor-pointer">
+export const Instagram = () => {
+return(
+  <div className="bg-gray-200 mx-1 hover:bg-[#bc2a8d] w-12 h-12 fill-[#bc2a8d] hover:fill-white border-pink-200 rounded-full flex items-center justify-center shadow-xl hover:shadow-pink-500/50 cursor-pointer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="32"
+      height="32"
       viewBox="0 0 24 24"
     >
       <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z"></path>
@@ -41,6 +54,7 @@ const Instagram = () => (
     </svg>
   </div>
 );
+}
 
 export default function Socials({ SocialInfo }: { SocialInfo: SocialInfo[] }) {
   return (

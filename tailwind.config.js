@@ -7,8 +7,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        avenir : ["Avenir", "sans-serif"],
         poppins : ["Poppins", "sans-serif"],
         oswald: ["Oswald", "sans-serif"],
+
       }
     },
   },

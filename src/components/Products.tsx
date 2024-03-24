@@ -3,11 +3,11 @@ import avatar from "../assets/avatar.png";
 
 export default function Products() {
   return (
-    <div className="flex flex-col justify-center sm:h-full lg:h-screen py-12 bg-[#EBE915]">
-      <h1 className="font-bold text-center mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-900">
+    <div className="flex flex-col justify-center sm:h-full lg:h-screen py-12 ">
+      <h1 className="font-bold text-center mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white">
         This is what we have done
       </h1>
-      <h3 className="font-bold text-center mb-6 text-xl sm:text-2xl md:text-4xl lg:text-3xl text-gray-900">
+      <h3 className="font-bold text-center mb-6 text-xl sm:text-2xl md:text-4xl lg:text-3xl text-white">
         So far...
       </h3>
       <div className="flex flex-col justify-center">
