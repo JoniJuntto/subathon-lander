@@ -1,4 +1,3 @@
-import React from 'react';
 import MissionImage from '../assets/mission.webp';
 import StatementImage from '../assets/statement.webp';
 

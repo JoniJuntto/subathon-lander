@@ -1,5 +1,5 @@
-import {Github, LinkedIn, Twitter, Instagram } from './socials'
 import linkedin from "../assets/LinkedIn.svg";
+
 export default function CompanySocials(){
   
   return(

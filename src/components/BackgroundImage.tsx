@@ -1,6 +1,6 @@
 import React from "react";
 
-function Icon({children}: {chidlren: React.ReactNode}) {
+function Icon({children}: {children: JSX.Element[] | JSX.Element}) {
   return (
     <div className="relative w-screen min-h-screen" >
     <svg
