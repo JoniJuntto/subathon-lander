@@ -1,24 +1,9 @@
-import Products from "./components/Products";
-import Footer from "./components/footer";
-import Hero from "./components/hero";
-import Team from "./components/team";
-import BackgroundImage from "./components/BackgroundImage";
-import CompanySocials from './components/CompanySocials'
-import Mission from './components/Mission'
+import Hero1 from "@/components/hero/hero1";
 
 function App() {
   return (
     <>
-      <BackgroundImage >
-        <>
-          <Hero />
-          <CompanySocials/>
-        </>
-      </BackgroundImage>
-      <Mission />
-      <Team />
-      <Products />
-      <Footer />
+      <Hero1 />
     </>
   );
 }
