@@ -103,11 +103,7 @@ const TeamSection = () => {
                 </p>
                 <a
                   href={`mailto:${member.email}`}
-                  className={`text-sm transition-colors block ${
-                    member.primary
-                      ? "text-primary hover:text-primary/80"
-                      : "text-muted-foreground hover:text-muted-foreground/80"
-                  }`}
+                  className="text-sm transition-colors block text-primary hover:text-primary/80"
                 >
                   {member.email}
                 </a>
