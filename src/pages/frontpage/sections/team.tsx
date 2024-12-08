@@ -8,7 +8,6 @@ const team = [
     role: "CTO",
     bio: "Turning coffee into code since 2018",
     email: "viljami@pohina.group",
-    primary: true,
     image:
       "https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--29%20%281%29.jpg?img=medium",
     links: {
@@ -20,7 +19,6 @@ const team = [
     role: "CEO",
     bio: "Making impossible possible daily",
     email: "joni@pohina.group",
-    primary: true,
     image:
       "https://assembly.galleria.fi/kuvat/Assembly%20Summer%202023/Torstai/EmmiHalmela-ASMS23--8.jpg?img=medium",
     links: {
@@ -32,8 +30,7 @@ const team = [
     role: "CMO",
     bio: "Driving innovation at light speed",
     email: "miro@pohina.group",
-    primary: false,
-    image: "",
+    image: "/images/miro.png",
     links: {},
   },
 ];
@@ -73,9 +70,7 @@ const TeamSection = () => {
           {team.map((member) => (
             <Card
               key={member.name}
-              className={`group relative h-[28rem] overflow-hidden border-primary/5 hover:border-primary/10 transition-colors ${
-                member.primary ? "ring-1 ring-primary/20" : ""
-              }`}
+              className="group relative h-[28rem] overflow-hidden border-primary/5 hover:border-primary/10 transition-colors ring-1 ring-primary/20"
             >
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
