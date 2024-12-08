@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Rocket, Users, Shapes, ArrowRight } from "lucide-react";
+import { Code, Rocket, Users, Shapes } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const features = [
