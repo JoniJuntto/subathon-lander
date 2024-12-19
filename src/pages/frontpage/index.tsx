@@ -1,8 +1,6 @@
-import FeaturesSection from "@/pages/frontpage/sections/features";
 import HeroSection from "@/pages/frontpage/sections/hero";
-import ProjectsSection from "@/pages/frontpage/sections/projects";
-import ServicesSection from "@/pages/frontpage/sections/services";
-import TeamSection from "@/pages/frontpage/sections/team";
+import AmountsSection from "@/pages/frontpage/sections/amounts";
+import GoalsSection from "@/pages/frontpage/sections/goals";
 
 const Frontpage = () => {
   return (
@@ -10,17 +8,11 @@ const Frontpage = () => {
       <div id="hero">
         <HeroSection />
       </div>
-      <div id="features">
-        <FeaturesSection />
+      <div id="goals">
+        <GoalsSection />
       </div>
-      <div id="services">
-        <ServicesSection />
-      </div>
-      <div id="projects">
-        <ProjectsSection />
-      </div>
-      <div id="team">
-        <TeamSection />
+      <div id="amounts">
+        <AmountsSection />
       </div>
     </div>
   );

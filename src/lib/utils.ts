@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-type SectionId = "hero" | "features" | "services" | "projects" | "team";
+type SectionId = "hero" | "goals" | "amounts";
 
 export const scrollToSection = (sectionId: SectionId) => {
   const element = document.getElementById(sectionId);

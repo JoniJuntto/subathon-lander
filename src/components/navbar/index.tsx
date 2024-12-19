@@ -9,10 +9,8 @@ const Navbar = () => {
 
   const navItems = [
     { id: "hero", label: "Home" },
-    { id: "features", label: "Features" },
-    { id: "services", label: "Services" },
-    { id: "projects", label: "Projects" },
-    { id: "team", label: "Team" },
+    { id: "goals", label: "Goals" },
+    { id: "amounts", label: "Amounts" },
   ];
 
   const handleNavClick = (id: string) => {
@@ -25,7 +23,7 @@ const Navbar = () => {
       <nav className="w-full max-w-4xl bg-background/80 backdrop-blur-sm border border-primary/10 rounded-b-2xl">
         <div className="px-4">
           <div className="flex items-center justify-between h-16">
-            <div className="text-xl font-bold">Pöhinä Group</div>
+            <div className="text-xl font-bold">HuikkaThon subathon</div>
 
             <div className="hidden md:flex space-x-2">
               {navItems.map((item) => (
