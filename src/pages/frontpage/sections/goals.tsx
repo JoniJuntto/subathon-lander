@@ -1,3 +1,4 @@
+import CountdownTimer from "@/components/ClockComponent";
 import {
   Accordion,
   AccordionContent,
@@ -136,7 +137,9 @@ const GoalsSection = () => {
       </h2>
       <div className="text-center mb-6">
         <p className="text-2xl font-bold">Nykyiset pisteet: {currentPoints}</p>
-        <p className="text-2xl font-bold">Aikaa jäljellä: {timeLeft}</p>
+        <p className="text-2xl font-bold">
+          Aikaa jäljellä: <CountdownTimer unixTimestamp={timeLeft} />
+        </p>
       </div>
       <Accordion type="single" collapsible className="space-y-4">
         {categorizedGoals.map((category, index) => (

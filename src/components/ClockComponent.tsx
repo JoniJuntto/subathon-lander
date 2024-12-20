@@ -9,16 +9,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ unixTimestamp }) => {
 
   useEffect(() => {
     const calculateTimeRemaining = () => {
-      console.log("Calculating time remaining", unixTimestamp);
-      const isMilliseconds = unixTimestamp > 9999999999;
-
-      const targetSeconds = isMilliseconds
-        ? Math.floor(unixTimestamp / 1000)
-        : unixTimestamp;
-
       const currentTime = Math.floor(Date.now() / 1000);
-
-      const remainingSeconds = Math.max(0, targetSeconds - currentTime);
+      const remainingSeconds = Math.max(0, unixTimestamp - currentTime);
 
       if (remainingSeconds <= 0) {
         setTimeRemaining("00:00:00");
@@ -30,11 +22,14 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ unixTimestamp }) => {
       const minutes = Math.floor((remainingSeconds % 3600) / 60);
       const seconds = remainingSeconds % 60;
 
-      const formattedTime = `${days > 0 ? days + "d " : ""}${hours
-        .toString()
-        .padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds
-        .toString()
-        .padStart(2, "0")}`;
+      const formattedTime =
+        days > 0
+          ? `${days}d ${hours.toString().padStart(2, "0")}:${minutes
+              .toString()
+              .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`
+          : `${hours.toString().padStart(2, "0")}:${minutes
+              .toString()
+              .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
       setTimeRemaining(formattedTime);
     };
