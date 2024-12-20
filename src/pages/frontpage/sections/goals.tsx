@@ -20,7 +20,6 @@ interface GoalCategory {
 
 const GoalsSection = () => {
   const [currentPoints, setCurrentPoints] = useState<number>(0);
-  const [timeLeft, setTimeLeft] = useState<number>(0);
 
   useEffect(() => {
     const fetchPoints = async () => {
@@ -34,8 +33,8 @@ const GoalsSection = () => {
           }
         );
         const data = await response.json();
-        setCurrentPoints(data.amountOfPoints);
-        setTimeLeft(data.timeLeft);
+        console.log("data", data);
+        setCurrentPoints(data);
       } catch (error) {
         console.error("Failed to fetch points:", error);
       }
@@ -137,9 +136,6 @@ const GoalsSection = () => {
       </h2>
       <div className="text-center mb-6">
         <p className="text-2xl font-bold">Nykyiset pisteet: {currentPoints}</p>
-        <p className="text-2xl font-bold">
-          Aikaa jäljellä: <CountdownTimer unixTimestamp={timeLeft} />
-        </p>
       </div>
       <Accordion type="single" collapsible className="space-y-4">
         {categorizedGoals.map((category, index) => (
