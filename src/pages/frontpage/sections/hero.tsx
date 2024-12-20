@@ -25,11 +25,38 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch("https://subathon-api.onrender.com/api/amounts/live");
-        const data = await response.json();
-        setStats(data);
+        const response = await fetch(
+          "https://yak-probable-terminally.ngrok-free.app/api/amounts/live",
+          {
+            headers: {
+              "ngrok-skip-browser-warning": "true",
+            },
+          }
+        );
+
+        console.log("Response status:", response.status);
+        console.log("Response headers:", Object.fromEntries(response.headers));
+
+        const text = await response.text();
+        console.log("Raw response body:", text);
+
+        if (text.trim().startsWith("{")) {
+          const data = JSON.parse(text);
+          setStats(data);
+        } else {
+          throw new Error(
+            "Response is not JSON: " + text.substring(0, 100) + "..."
+          );
+        }
       } catch (error) {
         console.error("Error fetching live stats:", error);
+        setStats({
+          subCount: 0,
+          followCount: 0,
+          bitCount: 0,
+          viewerCount: 0,
+          endTime: 0,
+        });
       }
     };
 
@@ -66,7 +93,7 @@ const HeroSection = () => {
               </a>
             </Badge>
           </div>
-          
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6">
             HuikkaThon subathon
             <div className="my-12">
@@ -78,7 +105,10 @@ const HeroSection = () => {
           </h1>
 
           <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8 sm:mb-12 px-4">
-          Subathon on maraton-livestream, jossa yhteisö päättää, kuinka kauan striimi kestää ja mitä tapahtuu! Lähtökohtaisesti striimi kestää 4 tuntia, mutta katsojat voivat pidentää aikaa lahjoituksilla, tilauksilla, seuraamisilla tai kanavapisteillä.
+            Subathon on maraton-livestream, jossa yhteisö päättää, kuinka kauan
+            striimi kestää ja mitä tapahtuu! Lähtökohtaisesti striimi kestää 4
+            tuntia, mutta katsojat voivat pidentää aikaa lahjoituksilla,
+            tilauksilla, seuraamisilla tai kanavapisteillä.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
@@ -94,15 +124,12 @@ const HeroSection = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
             </Button>
           </div>
-
-          
         </div>
       </div>
-      
+
       <div className="absolute bottom-12 left-0 right-0">
-      
         <div className="container mx-auto">
-        <h3 className="text-4xl font-bold mb-4">Tilanne nyt</h3>
+          <h3 className="text-4xl font-bold mb-4">Tilanne nyt</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-background/40 backdrop-blur-sm p-6 rounded-2xl border border-border/50">
             <StatCard title="Subscribers" value={stats.subCount} />
             <StatCard title="Followers" value={stats.followCount} />
