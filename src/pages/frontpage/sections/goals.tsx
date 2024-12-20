@@ -1,4 +1,3 @@
-import CountdownTimer from "@/components/ClockComponent";
 import {
   Accordion,
   AccordionContent,
